@@ -2,15 +2,12 @@
     x:Class="RekapComparer.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:local="clr-namespace:RekapComparer"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="MainWindow"
+    Title="Rekap Comparer"
     Width="409"
     Height="200"
+    Background="WhiteSmoke"
     ResizeMode="CanMinimize"
-    WindowStartupLocation="CenterScreen"
-    mc:Ignorable="d">
+    WindowStartupLocation="CenterScreen">
 
     <Grid>
         <TextBlock
@@ -27,6 +24,7 @@
             Margin="10,26,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
+            VerticalContentAlignment="Center"
             IsReadOnly="True"
             TextWrapping="NoWrap" />
 
@@ -54,6 +52,7 @@
             Margin="10,70,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
+            VerticalContentAlignment="Center"
             IsReadOnly="True"
             TextWrapping="NoWrap" />
 
@@ -74,14 +73,25 @@
             VerticalAlignment="Top" />
 
         <Button
+            x:Name="buttonReset"
+            Width="100"
+            Height="30"
+            Margin="0,125,110,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Click="ButtonReset_Click"
+            Content="Reset" />
+
+        <Button
             x:Name="buttonProcess"
             Width="100"
             Height="30"
-            Margin="0,125,0,0"
+            Margin="110,125,0,0"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
             Click="ButtonProcess_Click"
-            Content="Process" />
+            Content="Process"
+            IsEnabled="False" />
 
     </Grid>
 </Window>
